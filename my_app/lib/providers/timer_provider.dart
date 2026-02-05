@@ -132,6 +132,8 @@ class TimerProvider with ChangeNotifier {
       _isRunning = false;
       _timer?.cancel();
       _switchToBreak();
+      _currentSession = null;
+      notifyListeners();
     }
   }
 
